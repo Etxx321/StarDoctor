@@ -1,0 +1,70 @@
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
+//using TMPro;
+//using System;
+
+//public class CompassBehaviour : MonoBehaviour
+//{
+//    public TextMeshPro headingText;
+
+//    private bool startTracking = false;
+
+//    void Start()
+//    {
+//        Input.compass.enabled = true;
+//        Input.location.Start();
+//        StartCoroutine(InitializeCompass());
+//    }
+
+//    void Update()
+//    {
+//        if (startTracking)
+//        {
+//            transform.rotation = Quaternion.Euler(0, Input.compass.trueHeading, 0);
+//            headingText.text = ((int)Input.compass.trueHeading).ToString() + "° " + DegreesToCardinalDetailed(Input.compass.trueHeading);
+//        }
+//    }
+
+//    IEnumerator InitializeCompass()
+//    {
+//        yield return new WaitForSeconds(1f);
+//        startTracking |= Input.compass.enabled;
+//    }
+
+//    private static string DegreesToCardinalDetailed(double degrees)
+//    {
+//        string[] caridnals = { "N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW", "N" };
+//        return caridnals[(int)Math.Round(((double)degrees * 10 % 3600) / 225)];
+//    }
+//}
+using System;
+using UnityEngine;
+using UnityEngine.UI; //required for Input.compass
+
+public float compassSmooth = 0.5f;
+private float m_lastMagneticHeading = 0f;
+
+public class CompassController : MonoBehaviour
+{
+    // Use this for initialization
+    void Start()
+    {
+        // If you need an accurate heading to true north, 
+        // start the location service so Unity can correct for local deviations:
+        Input.location.Start();
+        // Start the compass.
+        Input.compass.enabled = true;
+    }
+    // Update is called once per frame
+    private void Update()
+    {
+        //do rotation based on compass
+        float currentMagneticHeading = (float)Math.Round(Input.compass.magneticHeading, 2);
+        if (m_lastMagneticHeading < currentMagneticHeading - compassSmooth || m_lastMagneticHeading > currentMagneticHeading + compassSmooth)
+        {
+            m_lastMagneticHeading = currentMagneticHeading;
+            transform.localRotation = Quaternion.Euler(0, m_lastMagneticHeading, 0);
+        }
+    }
+}

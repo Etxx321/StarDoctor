@@ -1,0 +1,144 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using UnityEngine;
+using WorldWideAstronomy;
+
+public class CreateStars : MonoBehaviour
+{
+    //public TestLocationService TestLocationService;
+    public Transform spawnPos;
+    public GameObject spawnee;
+    //public static Object prefab = Resources.Load("Assets/Star Doctor/Stars");
+    //public static GameObject Create()
+    //{
+    //    GameObject newObject = Instantiate(prefab) as GameObject;
+    //    GameObject yourObject = newObject.GetComponent<GameObject>();
+    //    //do additional initialization steps here
+
+    //    return yourObject;
+    //}
+    //// Start is called before the first frame update
+
+
+    void Start()
+    {
+        Spawnstar();
+        Vector3 vector3 = new Vector3(20, 0, 0);
+        Instantiate(spawnee, spawnPos.position + vector3, spawnPos.rotation);
+        vector3 = new Vector3(0, 20, 0);
+        Instantiate(spawnee, spawnPos.position + vector3, spawnPos.rotation);
+        vector3 = new Vector3(0, 0, 20);
+        Instantiate(spawnee, spawnPos.position + vector3, spawnPos.rotation);
+        vector3 = new Vector3(-20, 0, 0);
+        Instantiate(spawnee, spawnPos.position + vector3, spawnPos.rotation);
+        vector3 = new Vector3(0, -20, 0);
+        Instantiate(spawnee, spawnPos.position + vector3, spawnPos.rotation);
+        vector3 = new Vector3(0, 0, -20);
+        Instantiate(spawnee, spawnPos.position + vector3, spawnPos.rotation);
+        ReadCSVfile();
+
+    }
+
+    void ReadCSVfile()
+    {
+        TextAsset stardata = Resources.Load<TextAsset>("hygdata_v3");
+        //StreamReader strReader = new StreamReader("Assets/StarDoctor/CSV/hygdata_v3.csv");
+        string[] data = stardata.text.Split(new char[] { '\n' });
+        for(int i=1; i<data.Length-1;i++) {
+            string[] row= data[i].Split(new char[] {','});
+            if (row[5].Length>1)
+            {
+                Debug.Log(row[5]);
+            }
+        }
+    }
+    public string longitude = "";
+    public string latitude = "";
+    public string time = "";
+    // Update is called once per frame
+    void Update()
+    {
+        longitude = UnityEngine.Input.location.lastData.longitude.ToString();
+        latitude = UnityEngine.Input.location.lastData.latitude.ToString();
+        time = System.DateTime.UtcNow.ToLocalTime().ToString("dd-MM-yyyy   HH:mm");
+       
+    }
+    void OnGUI()
+    {
+        GUILayout.Label(" ");
+        GUILayout.Label("Longitude: " + longitude);
+        GUILayout.Label("Latitude: " + latitude);
+        GUILayout.Label("Time: " + time);
+        //GUILayout.Label("Altitude: " + UnityEngine.Input.location.lastData.altitude.ToString());
+        //GUILayout.Label("Time: " + UnityEngine.Input.location.lastData.timestamp.ToString());
+    }
+    int Spawnstar()
+    {
+        double phi=0, elong=0, hm, phpa, tc, rh, wl, utc1=0, utc2=0, tai1=0, tai2=0,
+             tt1=0, tt2=0, xp, yp, dut1, rc=0, dc=0, pr, pd, px, rv,
+             eo=0,aob=0, zob=0, hob=0, dob=0, rob=0, testrc, testdc, dx, dy;
+        double[,] pvh = new double[2, 3];
+        double[,] pvb = new double[2, 3];
+        double[,] r = new double[3, 3];
+        /* Site longitude, latitude (radians) and height above the geoid (m). */
+        WWA.wwaAf2a(' ', 35, 00, 51.6230, ref elong);
+        WWA.wwaAf2a(' ', 32, 46, 32.9150, ref phi);
+        hm = 5;
+        /* Ambient pressure (HPa), temperature (C) and rel. humidity (frac). */
+        phpa = 982.3;
+        tc = 16;
+        rh = 0.50;
+        /* Effective color (microns). */
+        wl = 0.55;
+        /* UTC date. */
+        if (WWA.wwaDtf2d("UTC", 2021, 4, 11, 20, 00, 00,
+                        ref utc1, ref utc2)!=0) return -1;
+        /* TT date. */
+        if (WWA.wwaUtctai(utc1, utc2, ref tai1, ref tai2)!=0) return -1;
+        if (WWA.wwaTaitt(tai1, tai2, ref tt1, ref tt2)!=0) return -1;
+        /* EOPs: polar motion in radians, UT1-UTC in seconds. */
+        xp = 0.0894 * WWA.DAS2R;
+        yp = 0.4203 * WWA.DAS2R;
+        dut1 = -0.17617;
+        /* Corrections to IAU 2000A CIP (radians). */
+        dx = 0.269e-3 * WWA.DAS2R;
+        dy = -0.274e-3 * WWA.DAS2R;
+        /* Star ICRS RA,Dec (radians). */
+        if (WWA.wwaTf2a(' ', 14, 34, 16.81183, ref rc)!=0) return -1;
+        if (WWA.wwaAf2a('-', 12, 31, 10.3965, ref dc)!=0) return -1;
+        testrc = (60.0 * (60.0 * (18.402868))) * WWA.DS2R;
+        testdc = (60.0 * (60.0 * -34.384616)) * WWA.DAS2R;
+        reprd("ICRS, epoch J2000.0:", rc, dc);
+        Debug.Log("rc= " + rc + " dc= " + dc);
+        /* Annual proper motion: RA/Dec derivatives, epoch J2000.0. */
+        pr = System.Math.Atan2(-39.61e-3 * WWA.DAS2R, System.Math.Cos(dc));
+        pd = -124.05e-3 * WWA.DAS2R;
+        /* Parallax (arcsec) and recession speed (km/s). */
+        px = 0.02276;
+        rv = 0.0;
+
+
+        /* ICRS to observed. */
+        if (WWA.wwaAtco13(testrc, testdc, pr, pd, px, rv, utc1, utc2, dut1,
+                         elong, phi, hm, xp, yp, phpa, tc, rh, wl,
+                         ref aob, ref zob, ref hob, ref dob, ref rob, ref eo)!=0) return -1;
+        reprd("Kaus Australis at 11/4/2021 20:00 ICRS -> observed:", rob, dob);
+        Debug.Log("rob= "+rob+" dob= "+dob);
+        Debug.Log("rob= " + aob + " dob= " + zob);
+        return 0;
+    }
+    void reprd(string s, double ra, double dc)
+    {
+        char pm='+';
+        int[] i=new int [4];
+        Debug.Log(s);
+        WWA.wwaA2tf(7, ra, ref pm, i);
+        Debug.Log(i[0] +" "+ i[1] + " " + i[2] + "." + i[3]);
+        WWA.wwaA2af(6, dc, ref pm, i);
+        Debug.Log(pm+i[0] + " " + i[1] + " " + i[2] + "." + i[3]);
+        
+    }
+}
+
+    

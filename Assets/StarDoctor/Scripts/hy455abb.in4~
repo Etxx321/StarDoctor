@@ -1,0 +1,43 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Compass : MonoBehaviour
+{
+    private float m_lastMagneticHeading = 0.0f;
+    public float compassSmooth = 0.5f;
+    public float smoothing = 0.5f;
+    Quaternion rotation;
+    // Start is called before the first frame update
+    void Start()
+    {
+        Input.location.Start();
+        Input.compass.enabled = true;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        float currentMagneticHeading = (float)Math.Round(Input.compass.trueHeading, 2);
+        if (m_lastMagneticHeading < currentMagneticHeading - compassSmooth || m_lastMagneticHeading > currentMagneticHeading + compassSmooth)
+        {
+            m_lastMagneticHeading = currentMagneticHeading;
+            rotation = Quaternion.Euler(0, (-m_lastMagneticHeading), 0);
+            rotation = Quaternion.Euler(0, ((float)0.5 * rotation.y), 0);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, smoothing);
+        }
+
+    }
+    void OnGUI()
+    {
+        GUILayout.Label("True heading: " + Input.compass.trueHeading);
+    }
+    //void OnGUI()                                                          
+    //{
+    //    GUILayout.Label("rawVector_x: " + Input.compass.rawVector.x);
+    //    GUILayout.Label("rawVector_y: " + Input.compass.rawVector.y);
+    //    GUILayout.Label("rawVector_z: " + Input.compass.rawVector.z);
+    //    GUILayout.Label("magneticHeading: " + Input.compass.magneticHeading);
+    //}
+}

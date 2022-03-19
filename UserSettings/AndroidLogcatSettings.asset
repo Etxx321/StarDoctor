@@ -1,0 +1,515 @@
+{
+    "m_SelectedDeviceId": "ce081718f48a60040d7e",
+    "m_SelectedPackage": {
+        "deviceId": "ce081718f48a60040d7e",
+        "name": "com.NemeshHithush.StarDoctor",
+        "processId": 20775,
+        "exited": false
+    },
+    "m_SelectedPriority": 0,
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.sec.android.app.launcher",
+            "processId": 19266,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 6559,
+            "exited": true
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 7209,
+            "exited": true
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 7917,
+            "exited": true
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 10098,
+            "exited": true
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 10761,
+            "exited": true
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 17057,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 17735,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 18342,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 18941,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 19570,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 19837,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 20396,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 20813,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 21112,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 21585,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 22309,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 22853,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 23479,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 23964,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 24429,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 24770,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 25157,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 25403,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 26111,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 26569,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 26919,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 27822,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 28295,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 28706,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 28993,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 29300,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 29749,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 30095,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 30455,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 30890,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 31383,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 31686,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 32641,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 737,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 1921,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 2808,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 3244,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 3612,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 4067,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 4657,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 5097,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 5871,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 17947,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 18280,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 18998,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 19446,
+            "exited": false
+        },
+        {
+            "deviceId": "ce081718f48a60040d7e",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 20775,
+            "exited": false
+        },
+        {
+            "deviceId": "LGH990f4852d",
+            "name": "com.unity3d.mobileremote",
+            "processId": 14549,
+            "exited": true
+        },
+        {
+            "deviceId": "LGH990f4852d",
+            "name": "com.DefaultCompany.Cameramovment",
+            "processId": 15176,
+            "exited": true
+        },
+        {
+            "deviceId": "LGH990f4852d",
+            "name": "com.DefaultCompany.Cameramovment",
+            "processId": 18114,
+            "exited": true
+        },
+        {
+            "deviceId": "LGH990f4852d",
+            "name": "com.DefaultCompany.Cameramovment",
+            "processId": 20921,
+            "exited": true
+        },
+        {
+            "deviceId": "LGH990f4852d",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 14469,
+            "exited": true
+        },
+        {
+            "deviceId": "LGH990f4852d",
+            "name": "com.android.settings",
+            "processId": 2875,
+            "exited": false
+        },
+        {
+            "deviceId": "LGH990f4852d",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 17199,
+            "exited": false
+        },
+        {
+            "deviceId": "LGH990f4852d",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 19973,
+            "exited": false
+        },
+        {
+            "deviceId": "LGH990f4852d",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 24122,
+            "exited": false
+        },
+        {
+            "deviceId": "LGH990f4852d",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 29323,
+            "exited": false
+        },
+        {
+            "deviceId": "LGH990f4852d",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 31015,
+            "exited": false
+        },
+        {
+            "deviceId": "LGH990f4852d",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 6409,
+            "exited": false
+        },
+        {
+            "deviceId": "LGH990f4852d",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 8169,
+            "exited": false
+        },
+        {
+            "deviceId": "LGH990f4852d",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 9719,
+            "exited": false
+        },
+        {
+            "deviceId": "LGH990f4852d",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 13736,
+            "exited": false
+        },
+        {
+            "deviceId": "LGH990f4852d",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 15336,
+            "exited": false
+        },
+        {
+            "deviceId": "LGH990f4852d",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 17648,
+            "exited": false
+        },
+        {
+            "deviceId": "521155a9",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 11491,
+            "exited": true
+        },
+        {
+            "deviceId": "521155a9",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 11496,
+            "exited": true
+        },
+        {
+            "deviceId": "521155a9",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 11501,
+            "exited": true
+        },
+        {
+            "deviceId": "521155a9",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 11503,
+            "exited": true
+        },
+        {
+            "deviceId": "521155a9",
+            "name": "com.NemeshHithush.StarDoctor",
+            "processId": 11494,
+            "exited": true
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": false
+            }
+        ]
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 2,
+        "Behavior": 0
+    },
+    "m_Filter": "",
+    "m_FilterIsRegularExpression": false,
+    "m_SymbolPaths": []
+}
